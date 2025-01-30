@@ -1,0 +1,104 @@
+@use "@/assets/style/fonts/stylesheet" as *;
+@use '@/assets/style/variable' as *;
+@use '@/assets/style/media' as *;
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    gap: 60px;
+
+    @include media-breakpoint-down(my) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__content-title {
+    font-size: 20px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 208px;
+    }
+  }
+
+  &__content-rating-stars {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__content-rating {
+    font-family: 'Greenwich', sans-serif;
+    font-size: 36px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+    }
+  }
+
+  &__content-reviews {
+    font-size: 14px;
+    font-weight: 400;
+    color: $grey-50;
+  }
+
+  &__content-stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+}
+
+.google-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(xxs) {
+    gap: 6px;
+  }
+}

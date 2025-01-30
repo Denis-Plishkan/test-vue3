@@ -1,0 +1,38 @@
+@use '@/assets/style/variable' as *;
+@use '@/assets/style/media' as *;
+
+.button {
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  &_primary {
+    background: linear-gradient(90deg, #e6f7f5 0%, #f8fcfc 100%);
+    color: $dark-50;
+    border: 1px solid $green-50;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $green-50;
+    }
+  }
+
+  &_secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #3cb9a0 0%, #1786ac 100%);
+    color: #fff;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: linear-gradient(180deg, #3cb9a0 0%, #1786ac 100%);
+    }
+  }
+
+}

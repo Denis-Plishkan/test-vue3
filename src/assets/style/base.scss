@@ -1,0 +1,19 @@
+@use "reset";
+@use "media";
+@use "@/assets/style/fonts/stylesheet" as *;
+
+body {
+  font-family: 'Formular', sans-serif;
+  font-weight: 500;
+}
+
+[class$="__container"] {
+  max-width: 1488px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#app{
+  height: 100%;
+}
